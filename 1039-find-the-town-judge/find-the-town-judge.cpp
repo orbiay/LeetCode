@@ -1,7 +1,6 @@
 class Solution {
 public:
     int findJudge(int n, vector<vector<int>>& trust) {
-        // cout << trust.size() << " " << trust.empty() << endl;
         if (trust.empty() && n > 1)
             return -1;
         if (trust.empty() && n == 1)
