@@ -11,7 +11,6 @@ public:
         vector<int> v ;
         int count = 0;
         int save = 0;
-        pair<int,int> pr;
         for (int i = 0;i < trust.size();i++)
         {
             v = trust[i];
@@ -27,13 +26,10 @@ public:
                 count++;
                 save = v[1];
                 cout<<v[1]<<endl;
-                // break;
             }
         }
         if (ha[save] > 0  || count == 0)
-        {
             return -1;
-        }
         return save;
     }
 };
