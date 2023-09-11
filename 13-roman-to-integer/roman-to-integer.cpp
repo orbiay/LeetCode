@@ -1,7 +1,7 @@
 class Solution {
 public:
     int romanToInt(string s) {
-        map<string,int> hash;
+       unordered_map<string,int> hash;
         int sum = 0;
         for (int i = 0;i < s.length();i++)
         {
