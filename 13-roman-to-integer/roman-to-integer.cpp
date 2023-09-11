@@ -7,7 +7,6 @@ public:
         {
             if (s[i + 1] && s[i] == 'I' and (s[i + 1] == 'V' or s[i + 1] == 'X'))
             {
-                cout<<"1"<<endl;
                 if (s[i + 1] == 'V')
                     hash["IV"] += 4;
                 else 
@@ -17,7 +16,6 @@ public:
             }
             else if (s[i + 1] and s[i] == 'X' and (s[i + 1] == 'L' or s[i + 1] == 'C'))
             {
-                cout<<"2"<<endl;
                 if (s[i + 1] == 'L')
                     hash["XL"] += 40;
                 else 
@@ -27,7 +25,6 @@ public:
             }
             else if (s[i + 1] and s[i] == 'C' and (s[i + 1] == 'D' or s[i + 1] == 'M'))
             {
-                cout<<"3"<<endl;
                  if (s[i + 1] == 'D')
                     hash["CD"] += 400;
                 else 
@@ -35,7 +32,6 @@ public:
                 i++;
                 continue;
             }
-            cout<<"i = "<<i<<endl;
             if (s[i] == 'I')
                 hash["I"]++;
             else if (s[i] == 'V')
