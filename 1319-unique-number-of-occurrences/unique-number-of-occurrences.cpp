@@ -2,8 +2,7 @@ class Solution {
 public:
     bool uniqueOccurrences(vector<int>& arr) {
         vector<int> poshash(2002,0);
-        vector<int> neghash(1001,0);
-        vector<int> hash(2002,0);
+        vector<int> hash(1001,0);
         for (int i = 0;i < arr.size();i++)
         {
             if (arr[i] < 0)
