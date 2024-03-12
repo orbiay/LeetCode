@@ -1,3 +1,2 @@
 # Write your MySQL query statement below
-SELECT Email FROM ( SELECT Email , COUNT(id) AS count FROM Person GROUP BY email) AS email_counts
-WHERE count > 1
+ SELECT Email FROM Person GROUP BY email HAVING COUNT(id) > 1
