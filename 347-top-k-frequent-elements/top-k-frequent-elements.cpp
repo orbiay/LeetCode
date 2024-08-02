@@ -1,27 +1,31 @@
 class Solution {
 public:
-    std::vector<int> topKFrequent(std::vector<int>& nums, int k) {
-        std::map<int, int> hash;
-        int max = 0;
-        std::vector<int> ret;
-        
-        for (int i = 0; i < nums.size(); i++) {
+    bool cmp(pair<string, int>& a, pair<string, int>& b) 
+    { 
+        return a.second > b.second; 
+    }
+    vector<int> topKFrequent(vector<int>& nums, int k) {
+        if (nums.size() == 1 || nums.size() == k)
+            return nums;
+        map<int,int> hash;
+        vector<pair<int,int>> vec;
+        vector<int> res;
+
+        for (int i = 0;i < nums.size();i++)
             hash[nums[i]]++;
-            if (max < hash[nums[i]])
-                max = hash[nums[i]];
-        }
+        for (map<int,int>::iterator it = hash.begin();it != hash.end();it++)
+            vec.push_back(*it);
         
-        std::vector<std::pair<int, int>> a(hash.begin(), hash.end());
-        
-        std::sort(a.begin(), a.end(), [](const std::pair<int, int>& a, const std::pair<int, int>& b) {
-            return a.second < b.second;
+        std::sort(vec.begin(), vec.end(), [](std::pair<int, int>& a, std::pair<int, int>& b) {
+            return a.second > b.second;
         });
+        hash.clear();
         
-        int j = hash.size() - 1;
-        for (int i = 0; i < k && j >= 0; i++, j--) {
-            ret.push_back(a[j].first);
+        for (vector<pair<int,int>> ::iterator it = vec.begin() ;it != vec.end() && k != 0;it++)
+        {
+            res.push_back(it->first);
+            k--;
         }
-        
-        return ret;
+        return res;
     }
 };
