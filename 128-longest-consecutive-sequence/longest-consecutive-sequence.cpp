@@ -36,6 +36,7 @@ public:
         //     return *max_it;
         // }
         // return 0;
+
         map<int,int> hash;
         int max = 0;
         int saver = - 1;
@@ -55,8 +56,29 @@ public:
                 max = 0;
             }
         }
-        return saver + 1;
+    //     return saver + 1;
+    // vector<int> hash(*max_element(nums.begin(),nums.end()) + 1,0);
+    // int max = 0;
+    // int saver = -1;
+
+    // for (int i = 0;i < nums.size();i++)
+    //     hash[nums[i]]++;
+    // for (int i = 0 ; i < hash.size();i++)
+    // {
+    //     if (i < hash.size() - 1 and hash[i] != 0 and hash[i + 1] != 0)
+    //         max++;
+    //     else
+    //     {
+    //         if (saver < max)
+    //         {
+    //             saver = max;
+    //             max = 0;
+    //         }
+    //     }
+    // }
+    return saver + 1;
     }
+
 };
 // #include <vector>
 // #include <algorithm>
