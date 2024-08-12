@@ -3,9 +3,10 @@ public:
     vector<int> twoSum(vector<int>& nums, int target) {
         unordered_map<int,int> hash;
         vector<int> vec;
-        for (int i = 0; i < nums.size();i++)
+        int n = nums.size();
+        for (int i = 0; i < n;i++)
             hash[nums[i]] = i + 1;
-        for (int i = 0; i <  nums.size();i++)
+        for (int i = 0; i <  n;i++)
         {
             if (hash[target - nums[i]] > 0)
             {
