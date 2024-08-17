@@ -13,7 +13,6 @@ class Solution(object):
         j = len(s) - 1
         s = list(s)  
         while i < j:
-            print(i,j)
             if self.isVowel(s[i]) and not self.isVowel(s[j]):
                 j -= 1
             elif self.isVowel(s[j]) and not self.isVowel(s[i]):
