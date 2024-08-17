@@ -5,10 +5,13 @@ class Solution(object):
         :type extraCandies: int
         :rtype: List[bool]
         """
-        m = max(candies)
+        max = -1
+        for n in candies:
+            if (n > max):
+                max = n
         res = []
         for n in candies:
-            if(m <= n + extraCandies):
+            if(max <= n + extraCandies):
                 res.append(True)
             else:
                 res.append(False)
