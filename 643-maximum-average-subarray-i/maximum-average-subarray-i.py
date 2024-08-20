@@ -5,10 +5,10 @@ class Solution(object):
         :type k: int
         :rtype: float
         """
-        n = len(nums)
+        # n = len(nums)
         maxval = float('-inf')
         currentMax = float(0)
-        for i in range(n):
+        for i in range(len(nums)):
             currentMax += nums[i]
             if i >= k - 1:
                 maxval = max(maxval,currentMax)
