@@ -10,8 +10,8 @@ class Solution(object):
         slow , fast = 0 ,0
         count = 0
         n = len(nums)
-        if len(nums) <= k:
-            return len(nums)
+        if n <= k:
+            return n
         if 1 not in nums:
             return 0
         while fast < n:
@@ -25,7 +25,3 @@ class Solution(object):
                 maxval = max(maxval,fast - slow + 1)
             fast += 1
         return maxval
-
-# [1,1,1,0,0,0,1,1,1,1,0]
-# k = 0
-# currn = 5
