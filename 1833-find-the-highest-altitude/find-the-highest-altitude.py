@@ -7,7 +7,8 @@ class Solution(object):
         i = 1
         maxVal = 0
         maxVal = max(maxVal,gain[0])
-        while i < len(gain):
+        n = len(gain)
+        while i < n:
             gain[i] = gain[i - 1] + gain[i]
             maxVal = max(maxVal,gain[i])
             i += 1
