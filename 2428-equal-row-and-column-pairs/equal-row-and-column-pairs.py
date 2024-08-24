@@ -16,26 +16,22 @@ class Solution(object):
             else:
                 print(string)
                 dics[string] = 1
-            # print(string)
-        print(dics)
         j = 0
         i = 0
         s = ""
         count = 0
-        while i < len(grid):
+        lenn = len(grid)
+        while i < lenn:
             s += str(grid[i][j])
             s += "/"
-            if i + 1 == len(grid):
+            if i + 1 == lenn:
                 i = -1
                 j += 1
                 if s in dics:
                     count += dics[s]
                 s = ""
-            if j == len(grid):
+            if j == lenn:
                 break
             i += 1 
 
         return count
-
-        # 1 1 | 1
-        # 1 1 | 1
