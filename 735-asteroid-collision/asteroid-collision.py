@@ -19,8 +19,6 @@ class Solution(object):
                             listt.append(save)
                             listt.append(n)
                             continue
-                        # elif save == -(n):
-                        #     continue
                         else:
                             while save > 0 and  save < -(n)  and len(listt):
                                 save = listt.pop()
@@ -37,8 +35,3 @@ class Solution(object):
                         listt.append(n)
             i += 1
         return listt
-[-2,2,1,-2]
-(0, [])
-(1, [-2])
-(2, [-2, 2])
-(3, [-2, 2, 1])
