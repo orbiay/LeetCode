@@ -32,5 +32,3 @@ class Solution(object):
         for n in listt:
             string += n
         return string
-# [a,a,a,]
-# bc
