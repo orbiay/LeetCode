@@ -13,7 +13,6 @@ class Solution(object):
             else:
                 if count > 1:
                     digits = list(str(count))
-                    print(digits)
                     d = len(digits)
                     for f in range(d):
                         chars.insert(j + f,digits[f])
