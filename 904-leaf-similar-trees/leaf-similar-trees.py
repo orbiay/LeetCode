@@ -21,7 +21,6 @@ class Solution(object):
         lisst1,lisst2 = [],[]
         self.DFS(root1,lisst1)
         self.DFS(root2,lisst2)
-        print(lisst1,lisst2)
         return lisst1 == lisst2
        
         
